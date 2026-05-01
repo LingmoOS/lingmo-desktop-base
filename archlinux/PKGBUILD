@@ -1,17 +1,17 @@
 # Maintainer: justforlxz <justforlxz@gmail.com>
-pkgname=deepin-desktop-base-git
+pkgname=lingmo-desktop-base-git
 pkgver=2021.1.25.r0.g2388ac2
 pkgrel=1
-sourcename=deepin-desktop-base
+sourcename=lingmo-desktop-base
 sourcetars=("$sourcename"_"$pkgver".tar.xz)
 sourcedir="$sourcename"
 pkgdesc='Base component for Deepin'
 arch=('any')
-url="https://github.com/linuxdeepin/deepin-desktop-base"
+url="https://github.com/linuxdeepin/lingmo-desktop-base"
 license=('GPL3')
 groups=('deepin-git')
-conflicts=('deepin-desktop-base')
-provides=('deepin-desktop-base')
+conflicts=('lingmo-desktop-base')
+provides=('lingmo-desktop-base')
 groups=('deepin-git')
 makedepends=('git')
 source=("${sourcetars[@]}"
