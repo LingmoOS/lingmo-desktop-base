@@ -1,15 +1,16 @@
-Source: deepin-desktop-base
+Source: lingmo-desktop-base
 Section: misc
 Priority: optional
-Maintainer: Deepin Sysdev <sysdev@deepin.com>
+Maintainer: Lingmo OS Team <team@lingmo.org>
 Standards-Version: 4.5.1
 Build-Depends: debhelper-compat (= 12)
+Homepage: https://github.com/LingmoOS
 
-Package: deepin-desktop-base
+Package: lingmo-desktop-base
 Architecture: any
 Provides: deepin-appstore-config
 Conflicts: deepin-desktop-server
-Depends: ${misc:Depends}, deepin-keyring, distro-info-data,
+Depends: ${misc:Depends}, distro-info-data,
  eject, fonts-noto, fonts-symbola
-Description: The basic file of Deepin Desktop, 
- provides system attribute description for DDE components
+Description: The basic file of Velora Desktop, 
+ provides system attribute description for Velora components
