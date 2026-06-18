@@ -2,9 +2,9 @@
 
 ## 位置和格式
 
-配置文件位于 `/usr/share/deepin/distribution.info` ，此文件中，格式为下述格式，使用基本遵循 `.desktop` [文件格式](https://specifications.freedesktop.org/desktop-entry-spec/latest/) 所描述的解析方式。由于并非完全遵循此规范，故避免混淆起见不使用 `.desktop` 作为扩展名。
+配置文件位于 `/usr/share/lingmo/distribution.info` ，此文件中，格式为下述格式，使用基本遵循 `.desktop` [文件格式](https://specifications.freedesktop.org/desktop-entry-spec/latest/) 所描述的解析方式。由于并非完全遵循此规范，故避免混淆起见不使用 `.desktop` 作为扩展名。
 
-此配置文件中所指向的媒体资源文件应当使用绝对路径，这些资源文件建议放置于 `/usr/share/deepin/distribution/` 目录下。
+此配置文件中所指向的媒体资源文件应当使用绝对路径，这些资源文件建议放置于 `/usr/share/lingmo/distribution/` 目录下。
 
 此文件用以提供发行版及其定制后应用需要呈现的公用信息。对于不需要定制的信息，组或者键可以留空（如果允许），应用在此时应当自行处理回落显示方案，例如在没有制造商相关信息时则不显示对应内容。
 
@@ -59,11 +59,11 @@ WebsiteName | 发行者厂商网站名称 | 呈现给用户的发行者网站显
 
 ```
 [Distributor]
-Name=Deepin
-Name[zh_CN]=深度操作系统
-Logo=/usr/share/deepin/distribution/distribution_logo.svg
+Name=Lingmo OS
+Name[zh_CN]=灵慕操作系统
+Logo=/usr/share/lingmo/distribution/distribution_logo.svg
 
 [Manufacturer]
 Name=Sorry
-Logo=/usr/share/deepin/distribution/manufacturer_logo.svg
+Logo=/usr/share/lingmo/distribution/manufacturer_logo.svg
 ```

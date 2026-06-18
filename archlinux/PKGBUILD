@@ -31,7 +31,7 @@ build() {
 package() {
   cd $sourcedir
   make DESTDIR="$pkgdir" install
-  install -Dm644 "$srcdir"/distribution.info -t "$pkgdir"/usr/share/deepin/
+  install -Dm644 "$srcdir"/distribution.info -t "$pkgdir"/usr/share/lingmo/
   # Remove Deepin distro's lsb-release
   rm "$pkgdir"/etc/lsb-release
   # Don't override systemd timeouts

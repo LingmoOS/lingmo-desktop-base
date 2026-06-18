@@ -1,7 +1,7 @@
 [Distribution]
-Name=Deepin
-WebsiteName=www.deepin.org
-Website=https://www.deepin.org
-Logo=/usr/share/deepin/distribution/distribution_logo.svg
-LogoLight=/usr/share/deepin/distribution/distribution_logo_light.svg
-LogoTransparent=/usr/share/deepin/distribution/distribution_logo_transparent.svg
+Name=Lingmo OS
+WebsiteName=lingmo.org
+Website=https://lingmo.org
+Logo=/usr/share/lingmo/distribution/distribution_logo.svg
+LogoLight=/usr/share/lingmo/distribution/distribution_logo_light.svg
+LogoTransparent=/usr/share/lingmo/distribution/distribution_logo_transparent.svg
