@@ -1,0 +1,7 @@
+[Version]
+SystemName=@@DISTRO_NAME@@
+ProductType=Desktop
+EditionName=
+MajorVersion=@@VERSION@@
+MinorVersion=@@VERSION@@
+OsBuild=@@BUILD_VER@@
