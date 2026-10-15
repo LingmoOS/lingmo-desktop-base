@@ -1,3 +1,14 @@
+lingmo-desktop-base (5.0.7.lingmo.1) unstable; urgency=medium
+
+  * fix: 去掉 debian/install 里多余的 os-version
+    上一版把 os-version 加进了 *.install，但该文件是 Makefile 在 install 阶段直接写入
+    ${DESTDIR}/etc/os-version，源码目录里并不存在，dh_install 因此报
+      dh_install: warning: Cannot find (any matches for) "os-version"
+      dh_install: error: missing files, aborting
+    删除该行即可（文件仍由 Makefile 安装进包内）。
+
+ -- Lingmo OS Team <team@lingmo.org>  Thu, 15 Oct 2026 21:14:51 +0800
+
 lingmo-desktop-base (5.0.6.lingmo.1) unstable; urgency=medium
 
   * feat: 提供 Lingmo 自己的隐私政策、用户体验计划协议与最终用户许可协议
