@@ -1,3 +1,20 @@
+lingmo-desktop-base (5.0.6.lingmo.1) unstable; urgency=medium
+
+  * feat: 提供 Lingmo 自己的隐私政策、用户体验计划协议与最终用户许可协议
+    控制中心“系统信息”页的许可协议正文此前指向
+    /usr/share/deepin-deepinid-client/privacy/（deepin 客户端包），Lingmo 上
+    并不存在该包，页面只能空白。现随本包提供并安装到代码优先读取的新路径
+    /usr/share/protocol/：
+      - privacy-policy/Privacy-Policy-CN-zh_CN.md、-en_US.md（隐私政策）
+      - userexperience-agreement/User-Experience-Program-License-Agreement-CN-zh_CN.md、-en_US.md
+      - enduser-agreement/End-User-License-Agreement-Community-CN-zh_CN.txt、-en_US.txt
+    文本内容按 Lingmo OS 的实际情况撰写（基于 Debian 的开源系统、无需账号、
+    默认不收集使用数据、体验改善计划为可选且默认关闭），中英双语。
+    注：生效日期等字段留待填写，正式发布前建议由法务复核。
+    另修正 debian/copyright 中残留的 Upstream-Name: deepin-desktop-base。
+
+ -- Lingmo OS Team <team@lingmo.org>  Thu, 15 Oct 2026 20:40:28 +0800
+
 lingmo-desktop-base (5.0.5.lingmo.1) unstable; urgency=medium
 
   * apt 镜像模板改为 Lingmo，并修掉版本号硬编码与 /etc/os-version 缺失

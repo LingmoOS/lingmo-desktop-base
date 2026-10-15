@@ -57,3 +57,7 @@ License: CC0-1.0
 Files: files/os-version-*
 Copyright: UnionTech Software Technology Co., Ltd.                                                  
 License: GPL-3.0-or-later
+
+Files: files/protocol/*
+Copyright: Lingmo OS Team
+License: CC-BY-SA-4.0

@@ -44,6 +44,21 @@ install:
 	install -Dm644 files/language_info.json  ${DESTDIR}/usr/share/i18n/language_info.json
 	install -Dm644 files/desktop-version ${DESTDIR}/usr/lib/deepin/desktop-version
 	install -Dm644 files/os-version.in ${DESTDIR}/usr/share/lingmo/os-version.in
+	# 控制中心“系统信息”页读取的协议文本（隐私政策/用户体验计划/最终用户许可协议）。
+	# 代码优先读 /usr/share/protocol/...，社区版分支原先被写死到 deepin 路径，
+	# 已在 lingmo-control-center 中改为同样读这里。
+	install -Dm644 files/protocol/privacy-policy/Privacy-Policy-CN-zh_CN.md \
+	    ${DESTDIR}/usr/share/protocol/privacy-policy/Privacy-Policy-CN-zh_CN.md
+	install -Dm644 files/protocol/privacy-policy/Privacy-Policy-CN-en_US.md \
+	    ${DESTDIR}/usr/share/protocol/privacy-policy/Privacy-Policy-CN-en_US.md
+	install -Dm644 files/protocol/userexperience-agreement/User-Experience-Program-License-Agreement-CN-zh_CN.md \
+	    ${DESTDIR}/usr/share/protocol/userexperience-agreement/User-Experience-Program-License-Agreement-CN-zh_CN.md
+	install -Dm644 files/protocol/userexperience-agreement/User-Experience-Program-License-Agreement-CN-en_US.md \
+	    ${DESTDIR}/usr/share/protocol/userexperience-agreement/User-Experience-Program-License-Agreement-CN-en_US.md
+	install -Dm644 files/protocol/enduser-agreement/End-User-License-Agreement-Community-CN-zh_CN.txt \
+	    ${DESTDIR}/usr/share/protocol/enduser-agreement/End-User-License-Agreement-Community-CN-zh_CN.txt
+	install -Dm644 files/protocol/enduser-agreement/End-User-License-Agreement-Community-CN-en_US.txt \
+	    ${DESTDIR}/usr/share/protocol/enduser-agreement/End-User-License-Agreement-Community-CN-en_US.txt
 	# dtkcore/系统监视器/设备管理器读的是 /etc/os-version（见 dtkcore dsysinfo.cpp
 	# 的 OS_VERSION_FILE），而这里以前只装了 /usr/share/lingmo/os-version.in，
 	# 于是 /etc/os-version 一直缺失、这些组件只能退回默认值。

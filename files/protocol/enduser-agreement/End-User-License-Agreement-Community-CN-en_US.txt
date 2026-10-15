@@ -1,0 +1,75 @@
+Lingmo OS Community Edition End User License Agreement
+
+Effective date: to be filled in
+
+1. General
+
+Lingmo OS Community Edition (the "System") is an open source operating system
+built on Debian. This agreement sets out your rights and obligations when using
+the System. Installing, starting or using the System means that you have read
+and accepted this agreement.
+
+2. Licensing and free software
+
+The System consists largely of free software released under the GNU General
+Public License (GPL), the GNU Lesser General Public License (LGPL), the Apache
+License, the MIT License and other free software licences. For those components
+you have the rights those licences grant, including the freedom to run, study,
+modify and redistribute them.
+
+The complete licence texts are available at:
+
+  /usr/share/common-licenses/
+  /usr/share/doc/<package>/copyright
+
+Where this agreement conflicts with the licence of a component, that component's
+licence prevails.
+
+3. Third-party components
+
+The System includes third-party components from the Debian project and the wider
+community. Copyright in those components belongs to their respective owners and
+they are governed by their own licences. No additional warranty is offered for
+them.
+
+4. No warranty
+
+The System is provided "as is", without warranty of any kind, express or implied,
+including but not limited to the warranties of merchantability, fitness for a
+particular purpose and non-infringement. You use the System at your own risk.
+
+5. Limitation of liability
+
+To the maximum extent permitted by applicable law, the developers and
+contributors of the System are not liable for any direct, indirect, incidental,
+special or consequential damages arising from the use of, or inability to use,
+the System, including but not limited to loss of data, interruption of business
+or loss of profit.
+
+6. Your obligations
+
+You agree:
+
+  1. not to use the System for activities that violate the laws of your
+     jurisdiction;
+  2. not to remove or alter copyright notices and licence texts that accompany
+     the System or its third-party components;
+  3. to comply with the requirements of the relevant component licences when
+     redistributing the System or modified versions of it.
+
+7. Privacy
+
+The System requires no account and does not collect usage data in the background.
+Optional features such as the User Experience Program are off by default. See the
+Privacy Policy shipped with the System for details.
+
+8. Changes to this agreement
+
+This agreement may be revised as the System evolves. Revised versions ship with
+system updates and carry a new effective date.
+
+9. Contact
+
+  Website: https://lingmo.org/
+  Support: https://lingmo.org/support
+  Bug reports: https://bugs.lingmo.org/

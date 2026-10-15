@@ -12,3 +12,6 @@ files/Lingmo.info /usr/share/python-apt/templates/
 files/Lingmo.mirrors /usr/share/python-apt/templates/
 distribution.info /usr/share/lingmo/
 distribution/* /usr/share/lingmo/distribution/
+files/protocol/privacy-policy/* usr/share/protocol/privacy-policy/
+files/protocol/userexperience-agreement/* usr/share/protocol/userexperience-agreement/
+files/protocol/enduser-agreement/* usr/share/protocol/enduser-agreement/
