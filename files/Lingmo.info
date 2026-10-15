@@ -1,9 +1,9 @@
 Suite: unstable
 RepositoryType: deb
-BaseURI: https://packages.deepin.com/deepin/
-MatchURI: \.deepin\.com
-MirrorsFile: Deepin.mirrors
-Description: Deepin 'unstable'
+BaseURI: https://packages.lingmo.org/lingmo/
+MatchURI: \.lingmo\.org
+MirrorsFile: Lingmo.mirrors
+Description: Lingmo OS 'unstable'
 Component: main
 CompDescription: Officially supported
 Component: contrib

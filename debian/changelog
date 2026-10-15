@@ -1,3 +1,17 @@
+lingmo-desktop-base (5.0.5.lingmo.1) unstable; urgency=medium
+
+  * apt 镜像模板改为 Lingmo，并修掉版本号硬编码与 /etc/os-version 缺失
+    - files/Deepin.info、files/Deepin.mirrors 改名为 Lingmo.info、Lingmo.mirrors，
+      内容从 packages.deepin.com / *.deepin.com 镜像改为 packages.lingmo.org 与
+      mirrors.lingmo.org（安装目标文件名原先漏改，仍写成 Deepin.info/Deepin.mirrors）。
+    - Makefile 里 VERSION 由硬编码的 25 改为取自 debian/changelog（5.0.4.lingmo.1 ->
+      5.0），此前 /etc/lsb-release 与 /usr/lib/deepin/desktop-version 都会写成 25。
+    - 生成并安装 /etc/os-version：dtkcore（OS_VERSION_FILE）、系统监视器、设备管理器
+      读的都是 /etc/os-version，而此前只装了 /usr/share/lingmo/os-version.in，且占位符
+      未替换，导致这些组件只能退回默认值。
+
+ -- Lingmo OS Team <team@lingmo.org>  Thu, 15 Oct 2026 20:00:04 +0800
+
 lingmo-desktop-base (5.0.4.lingmo.1) unstable; urgency=medium
 
   * new release for Lingmo OS.

@@ -1,5 +1,7 @@
-VERSION := 25
-RELEASE :=
+# 版本号只应有一处来源：取自 debian/changelog（例如 5.0.4.lingmo.1 -> 5.0）。
+# 原来是硬编码的 25，导致 /etc/lsb-release 与 /usr/lib/deepin/desktop-version 都写成 25。
+VERSION := $(shell dpkg-parsechangelog -SVersion 2>/dev/null | cut -d. -f1-2)
+RELEASE := lithium
 ARCH_BUILD :=$(shell uname -m)
 
 all: build
@@ -42,6 +44,11 @@ install:
 	install -Dm644 files/language_info.json  ${DESTDIR}/usr/share/i18n/language_info.json
 	install -Dm644 files/desktop-version ${DESTDIR}/usr/lib/deepin/desktop-version
 	install -Dm644 files/os-version.in ${DESTDIR}/usr/share/lingmo/os-version.in
+	# dtkcore/系统监视器/设备管理器读的是 /etc/os-version（见 dtkcore dsysinfo.cpp
+	# 的 OS_VERSION_FILE），而这里以前只装了 /usr/share/lingmo/os-version.in，
+	# 于是 /etc/os-version 一直缺失、这些组件只能退回默认值。
+	sed -e "s|@@DISTRO_NAME@@|Lingmo OS|g" -e "s|@@VERSION@@|$(VERSION)|g" \
+	    -e "s|@@BUILD_VER@@|$(RELEASE)|g" files/os-version.in > ${DESTDIR}/etc/os-version
 	install -Dm644 files/lsb-release     ${DESTDIR}/etc/lsb-release
 	install -Dm644 files/appstore.json     ${DESTDIR}/etc/appstore.json
 	install -Dm644 files/deepin-logo.png ${DESTDIR}/usr/share/plymouth/deepin-logo.png
@@ -49,8 +56,8 @@ install:
 	#install -Dm644 files/eff98ab2b2d91574a79fabd2b79eb7a9.jpg ${DESTDIR}/var/cache/image-blur/eff98ab2b2d91574a79fabd2b79eb7a9.jpg}
 	[ -e files/systemd.conf ] && install -Dm644 files/systemd.conf ${DESTDIR}/etc/systemd/system.conf.d/deepin-base.conf
 	[ -e files/logind.conf ] && install -Dm644 files/logind.conf ${DESTDIR}/etc/systemd/logind.conf.d/deepin-base.conf
-	install -Dm644 files/Deepin.info     ${DESTDIR}/usr/share/python-apt/templates/Deepin.info
-	install -Dm644 files/Deepin.mirrors     ${DESTDIR}/usr/share/python-apt/templates/Deepin.mirrors
+	install -Dm644 files/Lingmo.info     ${DESTDIR}/usr/share/python-apt/templates/Lingmo.info
+	install -Dm644 files/Lingmo.mirrors     ${DESTDIR}/usr/share/python-apt/templates/Lingmo.mirrors
 clean:
 	rm -f files/desktop-version
 	rm -f files/lsb-release
